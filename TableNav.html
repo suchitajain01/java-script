@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>TABLE NAVIGATION</title>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <caption>Table Of Legends </caption>
+
+            <colgroup>
+                <col span="2" style="background-color: #D6EEEE">
+                <col span="3" style="background-color: pink">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>SI</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td> 1 </td>
+                    <td> Sam </td>
+                    <td> Altman </td>
+                    <td> openAi@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Elon</td>
+                    <td>Musk</td>
+                    <td>spaceX@gmail.com </td>
+
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Aravind</td>
+                    <td>Srivinas</td>
+                    <td>perplexity@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Satya</td>
+                    <td>Nadella</td>
+                    <td>Microsoft@gmail.com</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <script>
+
+        let t = document.body.firstElementChild.firstElementChild
+        console.log(t);              //table
+        console.log(t.rows);        //all rows
+        console.log(t.caption);      //caption
+        console.log(t.tHead.firstElementChild);  //header row
+        console.log(t.tFoot);           //null
+        console.log(t.tBodies);          //HTML Collection
+        console.log(t.rows[0].rowIndex);  //row Index
+
+
+    </script>
+
+</body>
+
+</html>
