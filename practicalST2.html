@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical ST2</title>
+
+    <style>
+        
+
+        .container {
+            background: rgb(203, 188, 212);
+            padding: 50px;
+            border-radius: 10px;
+            width: 450px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(12, 1, 1, 0.2);
+            text-align: center;
+
+
+        }
+
+
+
+        button {
+            padding: 10px 10px;
+            margin: 10px;
+            border: none;
+            background-color: #a194ea;
+            color: rgb(18, 17, 17);
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        input{
+
+            margin-bottom:15px;
+           
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="heading">
+            <h1> Student ScoreCard </h1>
+        </div>
+
+        <input type="text" id="name" placeholder="Enter Name of the student ">
+        <br>
+        <input type="number" id="rollnum" placeholder="Enter the Roll number">
+        <br>
+        <input type="number" id="dept" placeholder="Department">
+
+
+
+        <form action="#">
+            <input type="number" id="subjects" placeholder = "Enter number of subjects">
+        </form>
+
+
+
+        <button onclick="calculateResult()">Calculate Result </button>
+        <button onclick="ShowDetails()"> Display all Details </button>
+
+
+        <div id="output"></div>
+
+
+    </div>
+
+
+
+    <script>
+
+
+        function calculateResult() {
+            let n = document.getElementById("subjects").value;
+
+            let total = 0;
+
+            for (let i = 1; i <= n; i++) {
+                let marks = parseInt(prompt("Enter marks for subject " + i));
+
+                total = total + marks;
+            }
+
+            let average = total / n;
+
+            let grade;
+    
+
+            if (average >= 90)
+                grade = "A";
+
+            else if (average >= 75)
+                grade = "B";
+
+            else if (average >= 50)
+                grade = "C";
+
+            else
+                grade = "F";
+        }
+
+
+
+
+           function ShowDetails() {
+            let name = document.getElementById("name").value;
+            let id = document.getElementById("rollnum")
+            let dept = document.getElementById("dept").value;
+            let marks = document.getElementB
+
+            document.getElementById("output").innerHtml =
+
+                "Name: " + name +
+                "<br>Roll Number " + id +
+                "<br>Department: " + dept +
+                "<br>Total Marks: " + marks +
+                "<br>Grade:" + grade;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
